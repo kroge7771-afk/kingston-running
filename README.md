@@ -30,11 +30,12 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Strava API Setup (required for activity sync)
 
 1. Go to [strava.com/settings/api](https://www.strava.com/settings/api) and create an application
-2. Set the **Authorization Callback Domain** to `localhost` (dev) or your Vercel domain (prod)
+2. Set the **Authorization Callback Domain** to `localhost` (dev) or `kingston-running.vercel.app` (prod)
 3. Copy your **Client ID** and **Client Secret** into `.env.local`:
    ```env
-   STRAVA_CLIENT_ID=234494
+   STRAVA_CLIENT_ID=235112
    STRAVA_CLIENT_SECRET=your_client_secret
+   REDIRECT_URI=https://kingston-running.vercel.app/api/auth/callback/strava
    STRAVA_REDIRECT_URI=http://localhost:3000/api/strava/callback
    DATABASE_URL=file:./dev.db
    ```
@@ -69,7 +70,8 @@ Brisbane coordinates: lat `-27.4698`, lon `153.0251`.
 3. Add environment variables:
    - `STRAVA_CLIENT_ID`
    - `STRAVA_CLIENT_SECRET`
-   - `STRAVA_REDIRECT_URI` → `https://your-site.vercel.app/api/strava/callback`
+   - `REDIRECT_URI` → `https://kingston-running.vercel.app/api/auth/callback/strava`
+   - `STRAVA_REDIRECT_URI` → optional legacy override (for old `/api/strava/callback` flows)
    - `DATABASE_URL` → `file:./dev.db`
 4. Update your Strava app's callback domain to your Vercel domain
 5. Deploy — the build command runs `prisma generate && prisma db push && next build`
