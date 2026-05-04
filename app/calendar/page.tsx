@@ -293,13 +293,13 @@ export default async function CalendarPage({
       {/* ── Top strip ───────────────────────────────────────────────────── */}
       <div className="grid grid-cols-3 gap-4">
 
-        {/* Panel 1: Runner Rating */}
+        {/* Panel 1: Kingston&apos;s Runner Rating */}
         <div
           className="rounded-[10px] p-4 space-y-3"
           style={{ background: "#181818", border: "1px solid rgba(255,255,255,0.08)" }}
         >
           <p className="text-xs uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>
-            Runner Rating
+            Kingston&apos;s Runner Rating
           </p>
           <div className="flex items-end gap-3">
             <span

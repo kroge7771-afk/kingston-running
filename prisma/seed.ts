@@ -8,8 +8,8 @@ async function main() {
     update: {},
     create: {
       id: 1,
-      name: "Cameron",
-      dateOfBirth: new Date("2002-08-16"),
+      name: "Kingston",
+      dateOfBirth: new Date("2006-10-10"),
       heightCm: 174,
       stravaConnected: false,
     },

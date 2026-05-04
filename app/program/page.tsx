@@ -249,7 +249,7 @@ export default async function ProgramPage() {
         {/* Page header */}
         <div className="flex items-center gap-3 flex-wrap">
           <Logo size="sm" showWordmark={false} />
-          <h1 className="text-xl font-bold text-white">Training Program</h1>
+          <h1 className="text-xl font-bold text-white">Kingston&apos;s Training Program</h1>
           <span
             className="text-xs font-semibold px-2.5 py-1 rounded-full"
             style={phaseChipStyle(currentPlanEntry?.phase ?? "Base")}

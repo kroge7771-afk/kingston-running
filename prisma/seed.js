@@ -7,8 +7,8 @@ async function main() {
     update: {},
     create: {
       id: 1,
-      name: "Cameron",
-      dateOfBirth: new Date("2002-08-16"),
+      name: "Kingston",
+      dateOfBirth: new Date("2006-10-10"),
       heightCm: 174,
       stravaConnected: false,
     },
@@ -26,7 +26,7 @@ async function main() {
     },
   });
 
-  console.log("Seed complete — Cameron's profile and settings initialised.");
+  console.log("Seed complete — Kingston's profile and settings initialised.");
 }
 
 main()

@@ -31,7 +31,7 @@ model Activity {
 
 model Profile {
   id                Int       @id @default(1)
-  name              String    @default("Cameron")
+  name              String    @default("Kingston")
   dateOfBirth       DateTime
   heightCm          Int       @default(174)
   stravaConnected   Boolean   @default(false)

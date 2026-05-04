@@ -555,7 +555,7 @@ export default function Logo({ size = "md", showWordmark = false, className = ""
           className={`font-bold leading-none text-white ${textClass}`}
           style={{ fontStretch: "condensed", letterSpacing: "-0.02em" }}
         >
-          Cameron&apos;s Running
+          Kingston&apos;s Running
         </span>
       )}
     </div>

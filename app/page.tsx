@@ -351,7 +351,7 @@ export default async function Dashboard({
 
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-xl font-bold text-white">Dashboard</span>
+            <span className="text-xl font-bold text-white">Kingston&apos;s Dashboard</span>
             <span
               className="text-xs font-semibold px-2.5 py-1 rounded-full"
               style={phaseStyle(currentPhase)}
@@ -363,6 +363,9 @@ export default async function Dashboard({
             {formatAEST(today, "EEEE, d MMMM yyyy")}
           </p>
         </div>
+        <p className="text-xs -mt-2" style={{ color: "var(--text-muted)" }}>
+          Kingston · Male · 19 · DOB 10/10/2006
+        </p>
 
         {/* ── Stat tiles ─────────────────────────────────────────────────── */}
         <div className="grid grid-cols-3 gap-3">

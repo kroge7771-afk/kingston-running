@@ -7,8 +7,8 @@ import { SettingsProvider } from "@/context/SettingsContext";
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 
 export const metadata: Metadata = {
-  title: "Cameron's Running",
-  description: "Personal marathon training tracker for Cameron",
+  title: "Kingston's Running",
+  description: "Personal running program for Kingston",
   icons: { icon: "/favicon.svg" },
 };
 
