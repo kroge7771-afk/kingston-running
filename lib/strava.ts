@@ -7,17 +7,11 @@ const STRAVA_API = "https://www.strava.com/api/v3";
 
 const CLIENT_ID = process.env.STRAVA_CLIENT_ID!;
 const CLIENT_SECRET = process.env.STRAVA_CLIENT_SECRET!;
-const REDIRECT_URI = process.env.STRAVA_REDIRECT_URI!;
+const DEFAULT_REDIRECT_URI = "https://kingston-running.vercel.app/api/auth/callback/strava";
+const REDIRECT_URI = process.env.REDIRECT_URI || process.env.STRAVA_REDIRECT_URI || DEFAULT_REDIRECT_URI;
 
 export function getStravaAuthUrl(): string {
-  const params = new URLSearchParams({
-    client_id: CLIENT_ID,
-    redirect_uri: REDIRECT_URI,
-    response_type: "code",
-    approval_prompt: "auto",
-    scope: "activity:read_all",
-  });
-  return `${STRAVA_AUTH_URL}?${params}`;
+  return `${STRAVA_AUTH_URL}?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&approval_prompt=auto&scope=activity:read_all`;
 }
 
 export async function exchangeStravaCode(code: string): Promise<{
