@@ -32,6 +32,7 @@ export async function exchangeStravaCode(code: string): Promise<{
     client_secret: CLIENT_SECRET,
     code,
     grant_type: "authorization_code",
+    redirect_uri: REDIRECT_URI,
   });
 
   console.log("[strava] exchanging code, client_id:", CLIENT_ID, "redirect_uri:", REDIRECT_URI);
