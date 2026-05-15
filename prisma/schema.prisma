@@ -139,13 +139,13 @@ model PlayerRating {
   overall          Float
   speed            Float
   endurance        Float
-  resilience       Float
+  resilience       Float    @default(1)
   hrEfficiency     Float
   toughness        Float
   prevOverall      Float
   prevSpeed        Float
   prevEndurance    Float
-  prevResilience   Float
+  prevResilience   Float    @default(1)
   prevHrEfficiency Float
   prevToughness    Float
 }
